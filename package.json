@@ -1,0 +1,32 @@
+{
+  "name": "sauce-connect-run",
+  "version": "1.0.0",
+  "description": "Run Sauce Connect around any other process",
+  "main": "cli.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shawnbot/sauceconnect-runner.git"
+  },
+  "keywords": [
+    "saucelabs",
+    "sauce",
+    "sauce-connect"
+  ],
+  "author": "Shawn Allen",
+  "license": "CC0",
+  "bugs": {
+    "url": "https://github.com/shawnbot/sauceconnect-runner/issues"
+  },
+  "homepage": "https://github.com/shawnbot/sauceconnect-runner",
+  "dependencies": {
+    "colors": "^1.0.3",
+    "sauce-connect-launcher": "^0.10.3",
+    "yargs": "^3.7.2"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.4"
+  }
+}
