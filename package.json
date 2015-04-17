@@ -1,5 +1,5 @@
 {
-  "name": "sauce-connect-run",
+  "name": "sauceconnect-runner",
   "version": "0.1.0",
   "description": "Run Sauce Connect around any other process",
   "main": "cli.js",
