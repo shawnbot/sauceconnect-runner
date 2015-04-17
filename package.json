@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Run Sauce Connect around any other process",
   "main": "cli.js",
+  "bin": {
+    "sc-run": "cli.js"
+  },
   "scripts": {
     "test": "mocha"
   },
