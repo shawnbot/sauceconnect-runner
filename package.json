@@ -26,6 +26,7 @@
   "homepage": "https://github.com/shawnbot/sauceconnect-runner",
   "dependencies": {
     "colors": "^1.0.3",
+    "require-env": "0.0.4",
     "sauce-connect-launcher": "^0.10.3",
     "yargs": "^3.7.2"
   },
