@@ -20,10 +20,21 @@ require('colors');
 var options = yargs.argv;
 var args = options._;
 
-var username = options.user || process.env.SAUCE_USERNAME;
-var accessKey = options.key || process.env.SAUCE_ACCESS_KEY;
+// look for .env in the cwd and read it if it exists
+var fs = require('fs');
+var path = require('path');
+var dotEnv = path.join(process.cwd(), '.env');
+var env = require('require-env');
+if (fs.existsSync(dotEnv)) {
+  env.inherit(process.cwd() + '/.env');
+}
 
-if (options.help || !username || !accessKey) {
+// require-env.require() will throw an error if the
+// named variable isn't set; catch these and show the help
+try {
+  var username = options.user || env.require('SAUCE_USERNAME');
+  var accessKey = options.key || env.require('SAUCE_ACCESS_KEY');
+} catch (error) {
   return yargs.showHelp();
 }
 
