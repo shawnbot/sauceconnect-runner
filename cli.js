@@ -52,7 +52,7 @@ var opt = {
 };
 
 sauceConnect(opt, function(error, tunnel) {
-  if (error) return console.error('error: %s'.red, error);
+  if (error) throw new Error('error: %s'.red, error);
 
   function close(code) {
     if (code) console.warn('child process exited (%d)'.red, code);
